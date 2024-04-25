@@ -1,1 +1,3 @@
-# Authorization
+# Class-Assignment---Authorization
+
+For this authorization assignment, I have put the authorization configuration where certain user have certain function like for admin, they can interact with a full function in the website where which I have created it special page [admin_index.php](admin_index.php). They can view all the data in the database and making any changes for the data like edit, delete and update the database. For the user, they can only view their data only on [user_record.php](user_record.php) and making of update and delete the data. The user cannot see and interact with other users data.
