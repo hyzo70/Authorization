@@ -73,7 +73,7 @@ session_start();
         
         <div id="form">
             <h1>Login</h1>
-            <form onsubmit="isvalid()" method="POST" autocomplete="on">
+            <form onsubmit="isvalid()" method="POST" autocomplete="off">
                 <label>Email: </label>
                 <input type="email" id="email" name="email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required></br></br>
                 <label>Password: </label>

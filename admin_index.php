@@ -25,7 +25,7 @@ session_start();
             $result = mysqli_query($con, $row);
          
             if ($result) {
-               header("Location: user_record.php?msg=New record created successfully");
+               header("Location: admin_record.php?msg=New record created successfully");
             } else {
                echo "Failed: " . mysqli_error($con);
             }
@@ -68,7 +68,7 @@ session_start();
         <input type="tel" name="homePhoneNo" pattern="^\+?[0-9]{2,}[0-9]{7,}$" id="homePhoneNo">
         <br>
         <button type="submit">Submit</button>
-        <a id="record" href="user_record.php">Student Records</a>
+        <a id="record" href="admin_record.php">Student Records</a>
     </form>
     <script src="index.js"></script>
 </body>

@@ -1,7 +1,8 @@
 function isvalid(){
     var email = document.getElementById("email").value;
+    var name = document.getElementById("user_name").value;
     var pass = document.getElementById("password").value;
-    if(email.length=="" && pass.length==""){
+    if(email.length=="" && pass.length=="" && name.length==""){
         alert(" Email and password field is empty!");
         return false;
     }
@@ -10,6 +11,10 @@ function isvalid(){
         return false;
     }
     else if(pass.length==""){
+        alert(" Password field is empty!");
+        return false;
+    }
+    else if(name.length==""){
         alert(" Password field is empty!");
         return false;
     }
@@ -34,3 +39,11 @@ function isvalid(){
       alert("Invalid Password input, please try again!");
   }
 }
+
+var regx = /^[a-zA-Z]+(?: [a-zA-Z]+(?: [a-zA-Z]+(?: (?:bin|ibn) )*[a-zA-Z]+)*)*(?: @ [a-zA-Z]+)?$/i;
+  if(regx.test(name)){
+      console.log("Input is valid");
+  }
+  else{
+      alert("Invalid Name input, please try again!");
+  }

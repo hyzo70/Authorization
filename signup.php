@@ -42,9 +42,9 @@ session_start();
         
         <div id="form">
             <h1>Sign Up</h1>
-            <form onsubmit="isvalid()" method="POST" autocomplete="on">
+            <form onsubmit="isvalid()" method="POST" autocomplete="off">
 				<label>Full Name: </label>
-                <input type="text" id="user_name" name="user_name"  required></br></br>
+                <input type="text" id="user_name" name="user_name" pattern="^[a-zA-Z]+(?: [a-zA-Z]+(?: [a-zA-Z]+(?: (?:bin|ibn) )*[a-zA-Z]+)*)*(?: @ [a-zA-Z]+)?$" required></br></br>
                 <label>Email: </label>
                 <input type="email" id="email" name="email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required></br></br>
                 <label>Password: </label>

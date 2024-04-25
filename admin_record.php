@@ -36,7 +36,7 @@ session_start();
     </div>';
     }
     ?>
-    <a href="user_index.php" class="btn btn-dark mb-3">Add New</a>
+    <a href="admin_index.php" class="btn btn-dark mb-3">Add New</a>
 
     <table class="table table-hover text-center">
       <thead class="table-dark">
@@ -55,11 +55,9 @@ session_start();
       <tbody>
         <?php
 
+    $query = "SELECT * FROM studentform";
+    $result = mysqli_query($con, $query);
 
-$query = "SELECT * FROM studentform";
-$result = mysqli_query($con, $query);
-
-if (mysqli_num_rows($result) > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
         ?>
         <tr>
@@ -72,16 +70,13 @@ if (mysqli_num_rows($result) > 0) {
             <td><?php echo $row["mobilePhoneNo"] ?></td>
             <td><?php echo $row["homePhoneNo"] ?></td>
             <td>
-              <a href="user_update.php?id=<?php echo $row["id"] ?>" class="link-dark"><i class="fa-solid fa-pen-to-square fs-5 me-3"></i></a><br><br>
+              <a href="admin_update.php?id=<?php echo $row["id"] ?>" class="link-dark"><i class="fa-solid fa-pen-to-square fs-5 me-3"></i></a><br><br>
               <a href="user_delete.php?id=<?php echo $row["id"] ?>" class="link-dark"><i class="fa-solid fa-trash fs-5"></i></a>
             </td>
         </tr>
         <?php
     }
-} else {
-    echo "No data has been recorded.";
-}
-
+    
         ?>
       </tbody>
     </table>
